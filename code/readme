@@ -1,0 +1,28 @@
+Code associated with the article "Functional but not obligatory link between microsaccades and neural modulation by covert spatial attention" by Baiwei Liu, Anna C. Nobre, Freek van Ede. 
+
+date: 23 feb 2022. 
+
+contact: baiwei liu (b.liu@vu.nl)
+
+These codes are written in Matlab R2021.
+
+The core function: "PBlab_gazepos2shift_1D" transforms gaze-position data to gaze-shift data, and is written for general use. It is compatible with any data in matrix format (trials x time).
+
+The remaining codes regard additional analyses of eeg and eyelink data that were extracted in Fieldtrip. To use these codes, your data should resemble fieldtrip data structures.
+
+creatDir.m and get_subFiles.m are general codes that called in other main codes (get_saccadeEvent.m, sortTrial_onSaccade.m, get_lateralisation.m).
+
+To run these codes, you can change the path where you put the code and the data at the beginning of these codes.
+
+You can run these codes in following order:
+
+1. run get_saccadeEvent.m to detect gaze shift from raw gaze postion data; and then plot the shift size and shift rate figure (figure 1c in the paper) to check whether the detected saccades are microsaccade. 
+
+2. run sortTrial_onSaccade.m to sort the trial into 'toward' 'away' 'no micorsaccade' based on the direction of detected microsaccades. 
+
+3. run get_lateralisation.m to get the lateralisation of power in these three types of trials.
+The behavioural and eye-tracking data can be freely downloaded at: https://doi.org/10.5061/dryad.m99r286 (Experiment 1). 
+
+The corresponding EEG data can be freely downloaded at: https:// doi.org/10.5061/dryad.sk8rb66.
+
+
